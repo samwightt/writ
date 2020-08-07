@@ -1,12 +1,12 @@
 import AppWrapper from "utils/AppWrapper";
-import ClientSideOnly from "utils/ClientSideOnly";
+import NoSSR from "react-no-ssr";
+import ClientSideOnly from "../../utils/ClientSideOnly";
+import { NextPage } from "next";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <AppWrapper>
-      <ClientSideOnly>
-        <h1>This works!</h1>
-      </ClientSideOnly>
-    </AppWrapper>
+    <ClientSideOnly>
+      <h1>Example!</h1>
+    </ClientSideOnly>
   );
 }
