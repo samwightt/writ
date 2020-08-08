@@ -5,6 +5,7 @@ const ClientSideOnly: FC = (props) => {
 
   useEffect(() => {
     setClient(true);
+    return () => setClient(false);
   }, []);
 
   return <>{isClient ? props.children : <h1>Loading...</h1>}</>;
