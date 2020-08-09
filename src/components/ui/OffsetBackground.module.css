@@ -1,0 +1,11 @@
+.background {
+  position: absolute;
+  height: 20rem;
+  right: 0;
+  left: 0;
+  background-color: white;
+}
+
+.content {
+  position: relative;
+}

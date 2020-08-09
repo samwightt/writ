@@ -1,8 +1,16 @@
 module.exports = {
-  purge: [],
+  purge: ["./src/**/*.html", "./src/**/*.ts", "./src/**/*.tsx"],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        "72": "18rem",
+        "84": "21rem",
+        "96": "24rem",
+      },
+    },
   },
-  variants: {},
+  variants: {
+    textColor: ["responsive", "hover", "focus", "group-hover"],
+  },
   plugins: [],
-}
+};

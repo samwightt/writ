@@ -33,10 +33,12 @@ const NavItem: FC<NavItemProps> = (props) => {
 const ApplicationLayout: FC = (props) => {
   return (
     <ClientSideOnly>
-      <div>
-        <nav className="py-4 border-b border-gray-200">
+      <div className="min-h-screen bg-gray-100">
+        <nav className="py-4 border-b border-gray-200 bg-white">
           <div className="container mx-auto flex flex-row justify-between items-center">
-            <h1 className="text-xl font-bold">writ</h1>
+            <Link href="/app">
+              <a className="text-xl font-bold">writ</a>
+            </Link>
             <ul className="flex flex-row space-x-2">
               <li>
                 <NavItem href="/app">Spaces</NavItem>
@@ -50,7 +52,7 @@ const ApplicationLayout: FC = (props) => {
             </ul>
           </div>
         </nav>
-        <div className="container mx-auto py-10">
+        <div className="container mx-auto">
           <Suspense fallback={<h1>Loading...</h1>}>{props.children}</Suspense>
         </div>
       </div>

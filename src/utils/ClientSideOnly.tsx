@@ -1,14 +1,14 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useContext, useEffect } from "react";
+import { ClientSideContext } from "./AppWrapper";
 
 const ClientSideOnly: FC = (props) => {
-  const [isClient, setClient] = useState(false);
+  const { clientSide, setClientSide } = useContext(ClientSideContext);
 
   useEffect(() => {
-    setClient(true);
-    return () => setClient(false);
+    if (!clientSide) setClientSide(true);
   }, []);
 
-  return <>{isClient ? props.children : <h1>Loading...</h1>}</>;
+  return <>{clientSide ? props.children : <h1>Loading...</h1>}</>;
 };
 
 export default ClientSideOnly;
