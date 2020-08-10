@@ -2,7 +2,7 @@ import { useUserSpaces } from "data/spaces";
 import Link from "next/link";
 import { OffsetBackground } from "components/ui";
 import { PlusCircleFill } from "react-bootstrap-icons";
-import { Hero, HeroTitle, HeroDescription } from "components/ui";
+import { Hero, HeroTitle, HeroDescription, Button } from "components/ui";
 
 const Home = () => {
   const spaces = useUserSpaces();
@@ -19,15 +19,9 @@ const Home = () => {
             them as you can.
           </HeroDescription>
           <Link href="/app/spaces/new">
-            <a className="group mt-8 bg-gray-200 font-semibold border shadow border-gray-700 px-6 py-3 rounded-lg hover:bg-black hover:shadow-md transition-all duration-200 flex flex-row items-center space-x-2">
-              <PlusCircleFill
-                size={20}
-                className="text-gray-700 group-hover:text-white"
-              />
-              <span className="text-gray-700 group-hover:text-white">
-                Create your first space
-              </span>
-            </a>
+            <Button as="a" icon={PlusCircleFill} className="mt-10">
+              Create your first space
+            </Button>
           </Link>
         </Hero>
       ) : (

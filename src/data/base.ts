@@ -10,3 +10,8 @@ export interface UserType {
   email: string;
   displayName: string;
 }
+
+export const createTimestamps = () => ({
+  create_date: new Date(),
+  update_date: new Date(),
+});

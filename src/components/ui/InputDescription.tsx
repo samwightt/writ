@@ -1,13 +1,13 @@
 import type { FC, HTMLProps } from "react";
 
-export const InputDescription: FC<HTMLProps<HTMLSpanElement>> = ({
+export const InputDescription: FC<HTMLProps<HTMLParagraphElement>> = ({
   className,
   children,
   ...props
 }) => {
   return (
-    <span className={`text-sm text-gray-600 ${className}`} {...props}>
+    <p className={`text-sm text-gray-600 leading-snug ${className}`} {...props}>
       {children}
-    </span>
+    </p>
   );
 };

@@ -1,10 +1,13 @@
 import type { FC, HTMLProps } from "react";
+import { Card } from "./Card";
 
 export const Hero: FC = ({ children }) => {
   return (
-    <div className="flex flex-col justify-center items-center py-32 rounded-md border-gray-200 shadow-lg bg-white">
-      {children}
-    </div>
+    <Card padding={false}>
+      <div className="flex flex-col justify-center items-center py-32">
+        {children}
+      </div>
+    </Card>
   );
 };
 
